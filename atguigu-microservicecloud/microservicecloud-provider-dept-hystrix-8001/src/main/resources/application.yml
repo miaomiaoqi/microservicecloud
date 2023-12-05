@@ -1,0 +1,54 @@
+server:
+  port: 8001
+mybatis:
+  config-location: classpath:mybatis/mybatis.cfg.xml
+  type-aliases-package: com.miaoqi.springcloud.entities
+  mapper-locations:
+  - classpath:mybatis/mapper/**/*.xml
+spring:
+  application:
+    name: microservicecloud-dept
+  datasource:
+    type: com.alibaba.druid.pool.DruidDataSource
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/cloudDB01?characterEncoding=utf8
+    username: root
+    password: miaoqi
+    dbcp2:
+      min-idle: 5
+      initial-size: 5
+      max-total: 5
+      max-wait-millis: 200
+
+eureka:
+  client:
+    service-url:
+      #      defaultZone: http://192.168.99.101:7001/eureka/(单机地址)
+      defaultZone: http://eureka7001.com:7001/eureka/,http://eureka7002.com:7002/eureka/,http://eureka7003.com:7003/eureka/
+  instance:
+    instance-id: microservicecloud-dept8001-hystrix # 自定义服务名称
+    prefer-ip-address: true # 访问路径可以显示ip
+info:
+  app.name: miaoqi-microservicecloud
+  company.name: www.miaoqi.com
+  build.artifactId: $project.artifactId$
+  build.version: $project.version$
+
+# 配置熔断策略：
+#hystrix:
+#  command:
+#    default:
+#      circuitBreaker:
+#        # 强制打开熔断器，如果该属性设置为true，强制断路器进⼊打开状态，将会拒绝所有的请求。 默认false关闭的
+#        forceOpen: false
+#        # 触发熔断错误⽐例阈值，默认值50%
+#        errorThresholdPercentage: 50
+#        # 熔断后休眠时⻓，默认值5秒
+#        sleepWindowInMilliseconds: 3000
+#        # 熔断触发最⼩请求次数，默认值是20
+#        requestVolumeThreshold: 2
+#      execution:
+#        isolation:
+#          thread:
+#            # 熔断超时设置，默认为1秒
+#            timeoutInMilliseconds: 2000

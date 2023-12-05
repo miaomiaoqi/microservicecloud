@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="spring-boot-09-elastic" />
+        <module name="springcloud-sell-config" />
+        <module name="miaoqi-spring-boot-starter" />
+        <module name="spring-boot-11-security" />
+        <module name="spring-boot-08-amqp" />
+        <module name="miaoqi-springboot-logback" />
+        <module name="microservicecloud-eureka-7003" />
+        <module name="microservicecloud-eureka-7002" />
+        <module name="microservicecloud-eureka-7001" />
+        <module name="springcloud-sell-gateway" />
+        <module name="user-service-provider" />
+        <module name="boot-user-service-provider" />
+        <module name="spring-boot-06-data-jdbc" />
+        <module name="itheima-zookeeper" />
+        <module name="spring-boot-15-param-parser" />
+        <module name="spring-boot-04-web-restfulcrud" />
+        <module name="spring-boot-13-starter-test" />
+        <module name="microservicecloud-api" />
+        <module name="springcloud-sell-order-server" />
+        <module name="microservicecloud-provider-dept-hystrix-8001" />
+        <module name="spring-boot-01-helloworld-quick" />
+        <module name="microservicecloud-consumer-dept-feign" />
+        <module name="springcloud-sell-product-client" />
+        <module name="microservicecloud-consumer-dept-8000" />
+        <module name="springcloud-sell-product-server" />
+        <module name="consumer-user (1)" />
+        <module name="order-service-consumer" />
+        <module name="microservicecloud-config-dept-client-8001" />
+        <module name="spring-boot-03-logging" />
+        <module name="springcloud-sell-order-common" />
+        <module name="spring-boot-02-config-autoconfig" />
+        <module name="gmall-interface" />
+        <module name="miaoqi-spring-boot-apollo" />
+        <module name="microservicecloud-config-client-3355" />
+        <module name="spring-boot-06-data-jpa" />
+        <module name="spring-boot-quartz-first" />
+        <module name="spring-boot-06-data-mybatis" />
+        <module name="springcloud-sell-user-server" />
+        <module name="microservicecloud-consumer-hystrix-dashboard" />
+        <module name="spring-boot-12-actuator" />
+        <module name="spring-boot-02-config-02" />
+        <module name="springcloud-sell-client" />
+        <module name="spring-boot-02-config" />
+        <module name="spring-boot-01-helloworld" />
+        <module name="consumer-user (2)" />
+        <module name="miaoqi-logback" />
+        <module name="boot-order-service-consumer" />
+        <module name="provider-ticket (2)" />
+        <module name="spring-boot-datasource-autoconfiguration" />
+        <module name="microservicecloud-config-eureka-client-7001" />
+        <module name="microservicecloud-provider-dept-8002" />
+        <module name="microservicecloud-provider-dept-8001" />
+        <module name="spring-boot-quartz-second" />
+        <module name="springcloud-sell-product-common" />
+        <module name="spring-boot-07-cache" />
+        <module name="microservicecloud-config-3344" />
+        <module name="microservicecloud-zuul-gateway-9527" />
+        <module name="springcloud-sell-order-client" />
+        <module name="provider-ticket (1)" />
+        <module name="springcloud-sell-eureka01" />
+        <module name="springcloud-sell-eureka02" />
+        <module name="springcloud-sell-eureka03" />
+        <module name="miaoqi-spring-boot-starter-autoconfigurer" />
+        <module name="spring-boot-10-task" />
+        <module name="atguigu-zookeeper" />
+        <module name="microservicecloud-provider-dept-8003" />
+        <module name="spring-boot-14-aop" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="consumer-user" target="1.8" />
+      <module name="microservicecloud" target="1.8" />
+      <module name="provider-ticket" target="1.8" />
+    </bytecodeTargetLevel>
+  </component>
+  <component name="JavacSettings">
+    <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="boot-order-service-consumer" options="-parameters" />
+      <module name="boot-user-service-provider" options="-parameters" />
+      <module name="consumer-user" options="-parameters" />
+      <module name="consumer-user (1)" options="-parameters" />
+      <module name="miaoqi-spring-boot-apollo" options="-parameters" />
+      <module name="miaoqi-springboot-logback" options="-parameters" />
+      <module name="provider-ticket" options="-parameters" />
+      <module name="provider-ticket (1)" options="-parameters" />
+      <module name="spring-boot-01-helloworld-quick" options="-parameters" />
+      <module name="spring-boot-02-config" options="-parameters" />
+      <module name="spring-boot-02-config-02" options="-parameters" />
+      <module name="spring-boot-06-data-jpa" options="-parameters" />
+      <module name="spring-boot-13-starter-test" options="-parameters" />
+      <module name="spring-boot-14-aop" options="-parameters" />
+      <module name="spring-boot-datasource-autoconfiguration" options="-parameters" />
+      <module name="spring-boot-quartz-first" options="-parameters" />
+      <module name="spring-boot-quartz-second" options="-parameters" />
+      <module name="springcloud-sell-client" options="-parameters" />
+      <module name="springcloud-sell-config" options="-parameters" />
+      <module name="springcloud-sell-eureka01" options="-parameters" />
+      <module name="springcloud-sell-eureka02" options="-parameters" />
+      <module name="springcloud-sell-eureka03" options="-parameters" />
+      <module name="springcloud-sell-gateway" options="-parameters" />
+      <module name="springcloud-sell-order-client" options="-parameters" />
+      <module name="springcloud-sell-order-common" options="-parameters" />
+      <module name="springcloud-sell-order-server" options="-parameters" />
+      <module name="springcloud-sell-product-client" options="-parameters" />
+      <module name="springcloud-sell-product-common" options="-parameters" />
+      <module name="springcloud-sell-product-server" options="-parameters" />
+      <module name="springcloud-sell-user-server" options="-parameters" />
+    </option>
+  </component>
+</project>

@@ -1,0 +1,4 @@
+com/miaoqi/springcloud/service/DeptClientServiceFallbackFactory.class
+com/miaoqi/springcloud/service/DeptClientServiceFallbackFactory$1.class
+com/miaoqi/springcloud/entities/Dept.class
+com/miaoqi/springcloud/service/DeptClientService.class

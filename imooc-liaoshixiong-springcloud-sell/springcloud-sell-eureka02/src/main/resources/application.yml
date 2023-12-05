@@ -1,0 +1,13 @@
+server:
+  port: 9902
+eureka:
+  client:
+    service-url:
+      defaultZone: http://eureka9901:9901/eureka/,http://eureka9903:9903/eureka/ # 寻找注册中心地址
+    register-with-eureka: false # 不向注册中心注册自己
+    fetch-registry: false # 不向注册中心拉取配置
+  server:
+    enable-self-preservation: false # 是否开启自我保护机制
+spring:
+  application:
+    name: springcloud-sell-eureka02

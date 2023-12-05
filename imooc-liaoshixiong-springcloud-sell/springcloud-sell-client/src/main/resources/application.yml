@@ -1,0 +1,12 @@
+server:
+  port: 9910
+eureka:
+  client:
+    service-url:
+      # 寻找注册中心地址
+      defaultZone: http://eureka9901:9901/eureka/,http://eureka9902:9902/eureka/,http://eureka9903:9903/eureka/
+  instance:
+    hostname: springcloud-sell-client # 服务监控地址
+spring:
+  application:
+    name: springcloud-sell-client

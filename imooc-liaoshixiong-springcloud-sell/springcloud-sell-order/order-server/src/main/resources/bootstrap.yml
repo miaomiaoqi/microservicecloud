@@ -1,0 +1,35 @@
+spring:
+  application:
+    name: springcloud-sell-order
+  cloud:
+    config:
+      profile: dev # 指定环境
+      uri: http://localhost:9936 # config server地址
+      label: master # git 分支
+#      discovery:
+#        service-id: SPRINGCLOUD-SELL-CONFIG # 服务id
+#        enabled: true # 是否启用
+
+# 更改 Hystrix 的配置到配置文件中, 优先级高于代码中配置
+hystrix:
+  command:
+    default: # 全局配置
+      execution:
+        isolation:
+          thread:
+            timeoutInMilliseconds: 1000
+    getProductInfoList: # 单独为某一方法设置超时时间
+      execution:
+        isolation:
+          thread:
+            timeoutInMilliseconds: 1000
+
+feign:
+  hystrix:
+    enabled: true
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+      base-path: /

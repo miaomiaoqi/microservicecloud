@@ -1,0 +1,29 @@
+server:
+  port: 9936
+spring:
+  application:
+    name: springcloud-sell-config
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://github.com/miaomiaoqi/springcloud-sell-config
+          username: 363962900@qq.com
+          password: 123aa456789
+          # 项目启动时会拷贝一份配置到本地,因为权限问题可以指定拷贝的目录
+          basedir: /Users/miaoqi/Documents/study/language/java/springcloud-sell/localconfig
+  rabbitmq:
+    addresses: 127.0.0.1:6672
+    username: guest
+    password: guest
+    virtual-host: /springcloud-sell
+    connection-timeout: 15000
+eureka:
+  client:
+    service-url:
+      defaultZone: http://eureka9901:9901/eureka,http://eureka9902:9902/eureka,http://eureka9903:9903/eureka
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*" # 暴露对外访问的接口

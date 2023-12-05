@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>com.miaoqi.atguigu</groupId>
+    <artifactId>atguigu-springboot</artifactId>
+    <version>1.0-SNAPSHOT</version>
+
+    <packaging>pom</packaging>
+
+    <modules>
+        <module>consumer-user</module>
+        <module>miaoqi-spring-boot-starter</module>
+        <module>miaoqi-spring-boot-starter-autoconfigurer</module>
+        <module>provider-ticket</module>
+        <module>spring-boot-01-helloworld</module>
+        <module>spring-boot-01-helloworld-quick</module>
+        <module>spring-boot-02-config</module>
+        <module>spring-boot-02-config-02</module>
+        <module>spring-boot-02-config-autoconfig</module>
+        <module>spring-boot-03-logging</module>
+        <module>spring-boot-04-web-restfulcrud</module>
+        <module>spring-boot-06-data-jdbc</module>
+        <module>spring-boot-06-data-jpa</module>
+        <module>spring-boot-06-data-mybatis</module>
+        <module>spring-boot-07-cache</module>
+        <module>spring-boot-08-amqp</module>
+        <module>spring-boot-09-elastic</module>
+        <module>spring-boot-10-task</module>
+        <module>spring-boot-11-security</module>
+        <module>spring-boot-12-actuator</module>
+        <module>spring-boot-13-starter-test</module>
+        <module>spring-boot-14-aop</module>
+        <module>spring-boot-15-param-parser</module>
+        <module>spring-boot-datasource-autoconfiguration</module>
+        <module>spring-boot-quartz-first</module>
+        <module>spring-boot-quartz-second</module>
+    </modules>
+
+</project>

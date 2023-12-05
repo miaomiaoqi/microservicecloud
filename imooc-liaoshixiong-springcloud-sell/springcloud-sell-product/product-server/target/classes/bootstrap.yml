@@ -1,0 +1,8 @@
+spring:
+  application:
+    name: springcloud-sell-product
+  cloud:
+    config:
+      uri: http://localhost:9936
+      profile: dev
+      label: master

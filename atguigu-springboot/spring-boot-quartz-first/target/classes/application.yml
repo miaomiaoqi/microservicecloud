@@ -1,0 +1,54 @@
+# 业务数据源
+spring:
+  application:
+    name: spring-boot-quartz-first
+  datasource:
+    username: root
+    password: miaoqi
+    url: jdbc:mysql://127.0.0.1:3306/quartz_business_db
+    driver‐class‐name: com.mysql.jdbc.Driver
+#============================================================================
+# Configure Datasources配置数据源(可被覆盖，如果在schedulerFactoryBean指定数据源)
+#============================================================================
+org:
+  quartz:
+    scheduler:
+      # 调度器实例名称
+      instanceName: configNameScheduler
+      # 调度器实例编号自动生成
+      instanceId: AUTO
+    jobStore:
+      # 持久化方式配置(存储方式使用JobStoreTX，也就是数据库)
+      class: org.quartz.impl.jdbcjobstore.JobStoreTX
+      # 持久化方式配置数据驱动，MySQL数据库
+      driverDelegateClass: org.quartz.impl.jdbcjobstore.StdJDBCDelegate
+      # quartz相关数据表前缀名
+      tablePrefix: QRTZ_
+      # quartz相关的数据库
+      dataSource: Qrtz
+      # 开启分布式部署
+      isClustered: true
+      # 配置是否使用
+      useProperties: false
+      # 分布式节点有效性检查时间间隔，单位：毫秒
+      clusterCheckinInterval: 20000
+    threadPool:
+      # 线程池实现类
+      class: org.quartz.simpl.SimpleThreadPool
+      # 执行最大并发线程数量
+      threadCount: 10
+      # 线程优先级
+      threadPriority: 5
+      # 配置为守护线程，设置后任务将不会执行
+      # makeThreadsDaemons: true
+      # 配置是否启动自动加载数据库内的定时任务，默认true
+      threadsInheritContextClassLoaderOfInitializingThread: true
+    # 单独配置quartz的数据源, 与业务数据库隔离开来
+    dataSource:
+      # 这个名字与org.quartz.scheduler.jobStore.dataSource的值一直
+      Qrtz:
+        driver: com.mysql.jdbc.Driver
+        URL: jdbc:mysql://127.0.0.1:3306/quartz_job_db?useUnicode=true&characterEncoding=utf8
+        user: root
+        password: miaoqi
+        validationQuery: select 1

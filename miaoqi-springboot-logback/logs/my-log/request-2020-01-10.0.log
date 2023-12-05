@@ -1,0 +1,20 @@
+2020-01-10 12:37:18.615 [my-log,,,main] [INFO ] [c.m.s.l.Application] Starting Application on localhost with PID 71776 (/Users/miaoqi/Documents/study/language/java/log/springboot-logback/target/classes started by miaoqi in /Users/miaoqi/Documents/study/language/java/log)
+2020-01-10 12:37:18.618 [my-log,,,main] [INFO ] [c.m.s.l.Application] No active profile set, falling back to default profiles: default
+2020-01-10 12:37:20.001 [my-log,,,main] [INFO ] [c.m.s.l.Application] Started Application in 1.707 seconds (JVM running for 2.483)
+2020-01-10 12:40:53.189 [my-log,,,http-nio-8080-exec-1] [INFO ] [c.m.s.l.Application] xxxxxxxxx
+2020-01-10 12:44:41.060 [my-log,,,main] [INFO ] [c.m.s.l.Application] Starting Application on localhost with PID 73195 (/Users/miaoqi/Documents/study/language/java/log/springboot-logback/target/classes started by miaoqi in /Users/miaoqi/Documents/study/language/java/log)
+2020-01-10 12:44:41.062 [my-log,,,main] [INFO ] [c.m.s.l.Application] No active profile set, falling back to default profiles: default
+2020-01-10 12:44:42.553 [my-log,,,main] [INFO ] [c.m.s.l.Application] Started Application in 1.851 seconds (JVM running for 2.658)
+2020-01-10 14:04:10.050 [my-log,,,main] [INFO ] [c.m.s.l.Application] Starting Application on localhost with PID 88287 (/Users/miaoqi/Documents/study/language/java/log/springboot-logback/target/classes started by miaoqi in /Users/miaoqi/Documents/study/language/java/log)
+2020-01-10 14:04:10.052 [my-log,,,main] [INFO ] [c.m.s.l.Application] No active profile set, falling back to default profiles: default
+2020-01-10 14:04:11.811 [my-log,,,main] [INFO ] [c.m.s.l.Application] Started Application in 2.278 seconds (JVM running for 3.235)
+2020-01-10 14:14:45.248 [my-log,,,main] [INFO ] [c.m.s.l.Application] Starting Application on localhost with PID 90238 (/Users/miaoqi/Documents/study/language/java/log/springboot-logback/target/classes started by miaoqi in /Users/miaoqi/Documents/study/language/java/log)
+2020-01-10 14:14:45.251 [my-log,,,main] [INFO ] [c.m.s.l.Application] No active profile set, falling back to default profiles: default
+2020-01-10 14:14:46.871 [my-log,,,main] [INFO ] [c.m.s.l.Application] Started Application in 1.971 seconds (JVM running for 2.771)
+2020-01-10 14:17:53.403 [my-log,,,main] [INFO ] [c.m.s.l.Application] Starting Application on localhost with PID 90860 (/Users/miaoqi/Documents/study/language/java/log/springboot-logback/target/classes started by miaoqi in /Users/miaoqi/Documents/study/language/java/log)
+2020-01-10 14:17:53.407 [my-log,,,main] [INFO ] [c.m.s.l.Application] No active profile set, falling back to default profiles: default
+2020-01-10 14:17:54.779 [my-log,,,main] [INFO ] [c.m.s.l.Application] Started Application in 1.78 seconds (JVM running for 2.533)
+2020-01-10 14:17:59.304 [my-log,,,http-nio-8080-exec-1] [INFO ] [c.m.s.l.Application] xxxxxxxxx
+2020-01-10 14:18:02.183 [my-log,,,http-nio-8080-exec-3] [INFO ] [c.m.s.l.Application] xxxxxxxxx
+2020-01-10 14:18:02.363 [my-log,,,http-nio-8080-exec-5] [INFO ] [c.m.s.l.Application] xxxxxxxxx
+2020-01-10 14:18:02.518 [my-log,,,http-nio-8080-exec-7] [INFO ] [c.m.s.l.Application] xxxxxxxxx

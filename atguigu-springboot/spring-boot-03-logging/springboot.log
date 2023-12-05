@@ -1,0 +1,17 @@
+2018-06-05 15:39:51.144  INFO 5725 --- [main] .m.s.SpringBoot03LoggingApplicationTests : Starting SpringBoot03LoggingApplicationTests on miaoqideMacBook-Pro.local with PID 5725 (started by miaoqi in /Users/miaoqi/Documents/study/language/java/spring-boot-03-logging)
+2018-06-05 15:39:51.149 DEBUG 5725 --- [main] .m.s.SpringBoot03LoggingApplicationTests : Running with Spring Boot v2.0.2.RELEASE, Spring v5.0.6.RELEASE
+2018-06-05 15:39:51.151  INFO 5725 --- [main] .m.s.SpringBoot03LoggingApplicationTests : No active profile set, falling back to default profiles: default
+2018-06-05 15:39:51.176  INFO 5725 --- [main] o.s.w.c.s.GenericWebApplicationContext   : Refreshing org.springframework.web.context.support.GenericWebApplicationContext@26d9b808: startup date [Tue Jun 05 15:39:51 CST 2018]; root of context hierarchy
+2018-06-05 15:39:52.025  INFO 5725 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-06-05 15:39:52.206  INFO 5725 --- [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.web.context.support.GenericWebApplicationContext@26d9b808: startup date [Tue Jun 05 15:39:51 CST 2018]; root of context hierarchy
+2018-06-05 15:39:52.265  INFO 5725 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2018-06-05 15:39:52.267  INFO 5725 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2018-06-05 15:39:52.291  INFO 5725 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-06-05 15:39:52.291  INFO 5725 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-06-05 15:39:52.425  INFO 5725 --- [main] .m.s.SpringBoot03LoggingApplicationTests : Started SpringBoot03LoggingApplicationTests in 16.518 seconds (JVM running for 17.285)
+2018-06-05 15:39:52.506 TRACE 5725 --- [main] .m.s.SpringBoot03LoggingApplicationTests : 这是trace日志...
+2018-06-05 15:39:52.507 DEBUG 5725 --- [main] .m.s.SpringBoot03LoggingApplicationTests : 这是debug日志...
+2018-06-05 15:39:52.507  INFO 5725 --- [main] .m.s.SpringBoot03LoggingApplicationTests : 这是info日志...
+2018-06-05 15:39:52.507  WARN 5725 --- [main] .m.s.SpringBoot03LoggingApplicationTests : 这是warn日志...
+2018-06-05 15:39:52.507 ERROR 5725 --- [main] .m.s.SpringBoot03LoggingApplicationTests : 这是error日志...
+2018-06-05 15:39:52.512  INFO 5725 --- [Thread-2] o.s.w.c.s.GenericWebApplicationContext   : Closing org.springframework.web.context.support.GenericWebApplicationContext@26d9b808: startup date [Tue Jun 05 15:39:51 CST 2018]; root of context hierarchy
