@@ -4,7 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4d64d916-68ee-4a32-9bdb-d0d7400a381e" name="Changes" comment="" />
+    <list default="true" id="4d64d916-68ee-4a32-9bdb-d0d7400a381e" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/atguigu-zookeeper/src/main/java/com/atguigu/case1/DistributeServer.java" beforeDir="false" afterPath="$PROJECT_DIR$/atguigu-zookeeper/src/main/java/com/atguigu/case1/DistributeServer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/atguigu-zookeeper/src/main/java/com/atguigu/case2/DistributedLock.java" beforeDir="false" afterPath="$PROJECT_DIR$/atguigu-zookeeper/src/main/java/com/atguigu/case2/DistributedLock.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -58,6 +61,7 @@
     "project.structure.proportion": "0.0",
     "project.structure.side.proportion": "0.0",
     "settings.editor.selected.configurable": "MavenSettings",
+    "spring.configuration.checksum": "2fd6a93f03ce66d1b8cc1cd2b2d09781",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
@@ -380,6 +384,7 @@
       <option name="presentableId" value="Default" />
       <updated>1701795001980</updated>
       <workItem from="1701795003706" duration="1062000" />
+      <workItem from="1702725580419" duration="2313000" />
     </task>
     <servers />
   </component>
