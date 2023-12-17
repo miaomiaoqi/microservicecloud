@@ -27,21 +27,22 @@ public class zkClient {
             @Override
             public void process(WatchedEvent watchedEvent) {
 
-            //    System.out.println("-------------------------------");
-            //    List<String> children = null;
-            //    try {
-            //        children = zkClient.getChildren("/", true);
-            //
-            //        for (String child : children) {
-            //            System.out.println(child);
-            //        }
-            //
-            //        System.out.println("-------------------------------");
-            //    } catch (KeeperException e) {
-            //        e.printStackTrace();
-            //    } catch (InterruptedException e) {
-            //        e.printStackTrace();
-            //    }
+                System.out.println("-------------------------------");
+                List<String> children = null;
+                try {
+                    // 监听是注册一次生效一次, 所以此处重复注册
+                    children = zkClient.getChildren("/", true);
+
+                    for (String child : children) {
+                        System.out.println(child);
+                    }
+
+                    System.out.println("-------------------------------");
+                } catch (KeeperException e) {
+                    e.printStackTrace();
+                } catch (InterruptedException e) {
+                    e.printStackTrace();
+                }
             }
         });
     }
@@ -53,8 +54,15 @@ public class zkClient {
 
     @Test
     public void getChildren() throws KeeperException, InterruptedException {
-        List<String> children = zkClient.getChildren("/", true);
+        // zkClient.getChildren("/", new Watcher() {
+        //     @Override
+        //     public void process(WatchedEvent watchedEvent) {
+        //
+        //     }
+        // });
+        List<String> children = zkClient.getChildren("/", true); // 采用创建 zkClient 的监听器
 
+        Thread.sleep(2000L);
         for (String child : children) {
             System.out.println(child);
         }

@@ -17,6 +17,7 @@ buildNumber.properties
 # Log file
 *.log
 .idea
+.idea/
 
 .project
 .classpath
