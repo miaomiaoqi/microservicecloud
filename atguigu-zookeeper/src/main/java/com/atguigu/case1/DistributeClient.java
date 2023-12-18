@@ -21,7 +21,7 @@ public class DistributeClient {
         // 1 获取zk连接
         client.getConnect();
 
-        // 2 监听/servers下面子节点的增加和删除
+        // 2 监听 /servers 下面子节点的增加和删除
         client.getServerList();
 
         // 3 业务逻辑（睡觉）

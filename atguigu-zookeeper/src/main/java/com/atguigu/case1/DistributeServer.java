@@ -21,7 +21,7 @@ public class DistributeServer {
         // 1 获取zk连接
         server.getConnect();
 
-        // 2 注册服务器到zk集群
+        // 2 注册服务器到 zk 集群
         server.regist(args[0]);
 
 
@@ -35,9 +35,9 @@ public class DistributeServer {
     }
 
     private void regist(String hostname) throws KeeperException, InterruptedException {
-        String create = zk.create("/servers/"+hostname, hostname.getBytes(), ZooDefs.Ids.OPEN_ACL_UNSAFE, CreateMode.EPHEMERAL_SEQUENTIAL);
+        String create = zk.create("/servers/" + hostname, hostname.getBytes(), ZooDefs.Ids.OPEN_ACL_UNSAFE, CreateMode.EPHEMERAL_SEQUENTIAL);
 
-        System.out.println(hostname +" is online") ;
+        System.out.println(hostname + " is online");
     }
 
     private void getConnect() throws IOException {

@@ -86,6 +86,8 @@ public class DistributedLock {
                     // 就一个节点，可以获取锁了
                     return;
                 } else {
+                    // System.out.println(thisNode + "---" + index);
+                    // Thread.sleep(6000L);
                     // 需要监听  他前一个节点变化
                     waitPath = "/locks/" + children.get(index - 1);
                     zk.getData(waitPath,true,new Stat());

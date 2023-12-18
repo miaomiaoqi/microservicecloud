@@ -8,9 +8,9 @@ public class DistributedLockTest {
 
     public static void main(String[] args) throws InterruptedException, IOException, KeeperException {
 
-       final  DistributedLock lock1 = new DistributedLock();
+        final DistributedLock lock1 = new DistributedLock();
 
-        final  DistributedLock lock2 = new DistributedLock();
+        final DistributedLock lock2 = new DistributedLock();
 
        new Thread(new Runnable() {
            @Override

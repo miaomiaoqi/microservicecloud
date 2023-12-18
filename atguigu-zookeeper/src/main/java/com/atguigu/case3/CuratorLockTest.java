@@ -68,10 +68,8 @@ public class CuratorLockTest {
 
         ExponentialBackoffRetry policy = new ExponentialBackoffRetry(3000, 3);
 
-        CuratorFramework client = CuratorFrameworkFactory.builder().connectString("hadoop102:2181,hadoop103:2181,hadoop104:2181")
-                .connectionTimeoutMs(2000)
-                .sessionTimeoutMs(2000)
-                .retryPolicy(policy).build();
+        CuratorFramework client = CuratorFrameworkFactory.builder().connectString("localhost:2182,localhost:2183,localhost:2184").connectionTimeoutMs(
+                2000).sessionTimeoutMs(2000).retryPolicy(policy).build();
 
         // 启动客户端
         client.start();
