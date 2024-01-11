@@ -1,4 +1,4 @@
-package com.atguigu.distributedlock;
+package com.atguigu.distributed.lock;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
