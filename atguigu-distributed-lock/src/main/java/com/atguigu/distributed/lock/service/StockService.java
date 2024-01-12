@@ -6,6 +6,8 @@ import com.atguigu.distributed.lock.mapper.StockMapper;
 import com.atguigu.distributed.lock.pojo.Stock;
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.baomidou.mybatisplus.core.conditions.update.UpdateWrapper;
+import org.redisson.api.RLock;
+import org.redisson.api.RedissonClient;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.redis.core.StringRedisTemplate;
 import org.springframework.data.redis.core.script.DefaultRedisScript;
@@ -39,7 +41,30 @@ public class StockService {
     @Autowired
     private DistributedLockClient distributedLockClient;
 
+    @Autowired
+    private RedissonClient redissonClient;
+
     public void deduct() {
+        RLock lock = this.redissonClient.getLock("lock");
+        lock.lock(10, TimeUnit.SECONDS);
+        try {
+            // 1. 查询库存信息
+            String stock = this.redisTemplate.opsForValue().get("stock");
+            // 2. 判断库存是否充足
+            if (stock != null && stock.length() != 0) {
+                Integer st = Integer.valueOf(stock);
+                if (st > 0) {
+                    // 3. 扣减库存
+                    this.redisTemplate.opsForValue().set("stock", String.valueOf(--st));
+                }
+            }
+        } finally {
+            lock.unlock();
+        }
+
+    }
+
+    public void deduct7() {
 
         DistributedRedisLock redisLock = this.distributedLockClient.getRedisLock("lock");
         redisLock.lock();
