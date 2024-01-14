@@ -13,7 +13,11 @@ public class StockController {
 
     @GetMapping("stock/deduct")
     public String deduct() {
-        this.stockService.deduct();
+        try {
+            this.stockService.deduct();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
         return "hello stock deduct!!";
     }
 

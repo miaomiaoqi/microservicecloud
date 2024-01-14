@@ -2,10 +2,16 @@ package com.atguigu.distributed.lock.service;
 
 import com.atguigu.distributed.lock.lock.DistributedLockClient;
 import com.atguigu.distributed.lock.lock.DistributedRedisLock;
+import com.atguigu.distributed.lock.mapper.LockMapper;
 import com.atguigu.distributed.lock.mapper.StockMapper;
+import com.atguigu.distributed.lock.pojo.Lock;
 import com.atguigu.distributed.lock.pojo.Stock;
+import com.atguigu.distributed.lock.zk.ZkClient;
+import com.atguigu.distributed.lock.zk.ZkDistributedLock;
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.baomidou.mybatisplus.core.conditions.update.UpdateWrapper;
+import org.apache.curator.framework.CuratorFramework;
+import org.apache.curator.framework.recipes.locks.InterProcessMutex;
 import org.redisson.api.RLock;
 import org.redisson.api.RedissonClient;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -40,11 +46,97 @@ public class StockService {
 
     @Autowired
     private DistributedLockClient distributedLockClient;
-
     @Autowired
     private RedissonClient redissonClient;
+    @Autowired
+    private ZkClient zkClient;
+    @Autowired
+    private CuratorFramework curatorFramework;
+    @Autowired
+    private LockMapper lockMapper;
 
     public void deduct() {
+        try {
+            // 加锁
+            Lock lock = new Lock();
+            lock.setLockName("lock");
+            this.lockMapper.insert(lock);
+
+            // 1. 查询库存信息
+            String stock = this.redisTemplate.opsForValue().get("stock");
+            // 2. 判断库存是否充足
+            if (stock != null && stock.length() != 0) {
+                Integer st = Integer.valueOf(stock);
+                if (st > 0) {
+                    // 3. 扣减库存
+                    this.redisTemplate.opsForValue().set("stock", String.valueOf(--st));
+                }
+            }
+            // 解锁
+            this.lockMapper.deleteById(lock.getId());
+        } catch (Exception e) {
+            e.printStackTrace();
+            try {
+                Thread.sleep(50L);
+                this.deduct();
+            } catch (InterruptedException ex) {
+                ex.printStackTrace();
+            }
+        }
+    }
+
+    public void deduct10() {
+        InterProcessMutex mutex = new InterProcessMutex(curatorFramework, "/curator/locks");
+        try {
+            mutex.acquire();
+            // 1. 查询库存信息
+            String stock = this.redisTemplate.opsForValue().get("stock");
+            // 2. 判断库存是否充足
+            if (stock != null && stock.length() != 0) {
+                Integer st = Integer.valueOf(stock);
+                if (st > 0) {
+                    // 3. 扣减库存
+                    this.redisTemplate.opsForValue().set("stock", String.valueOf(--st));
+                }
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+        } finally {
+            try {
+                mutex.release();
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
+        }
+    }
+
+    public void deduct9() {
+        ZkDistributedLock lock = this.zkClient.getLock("lock");
+        lock.lock();
+        try {
+            // 1. 查询库存信息
+            String stock = this.redisTemplate.opsForValue().get("stock");
+            // 2. 判断库存是否充足
+            if (stock != null && stock.length() != 0) {
+                Integer st = Integer.valueOf(stock);
+                if (st > 0) {
+                    // 3. 扣减库存
+                    this.redisTemplate.opsForValue().set("stock", String.valueOf(--st));
+                }
+            }
+        } finally {
+            lock.unlock();
+        }
+    }
+
+
+    /**
+     * redisson 分布式锁
+     *
+     * @author miaoqi
+     * @date 2024-01-13 18:54:28
+     */
+    public void deduct8() {
         RLock lock = this.redissonClient.getLock("lock");
         lock.lock(10, TimeUnit.SECONDS);
         try {
@@ -61,9 +153,14 @@ public class StockService {
         } finally {
             lock.unlock();
         }
-
     }
 
+    /**
+     * 自定义 redis 分布式锁
+     *
+     * @author miaoqi
+     * @date 2024-01-13 18:54:4
+     */
     public void deduct7() {
 
         DistributedRedisLock redisLock = this.distributedLockClient.getRedisLock("lock");
