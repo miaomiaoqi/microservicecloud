@@ -1,4 +1,4 @@
-<mxfile host="Electron" modified="2024-01-10T17:53:04.955Z" agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/22.1.18 Chrome/120.0.6099.199 Electron/28.1.2 Safari/537.36" etag="QiMJlcv2JD5IVSw80fDO" version="22.1.18" type="device">
+<mxfile host="Electron" modified="2024-01-23T13:35:50.686Z" agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/22.1.18 Chrome/120.0.6099.199 Electron/28.1.2 Safari/537.36" etag="yguQFc7yHkUsA0UPdXdN" version="22.1.18" type="device">
   <diagram id="WPpumHVSBpf7b6g2aD5Y" name="第 1 页">
     <mxGraphModel dx="954" dy="613" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
@@ -72,118 +72,166 @@
           <mxGeometry x="122.5" y="390" width="407.5" height="450" as="geometry" />
         </mxCell>
         <mxCell id="TfjjIyQU7C_TwdfaUHE4-139" value="&lt;h1&gt;redis&lt;/h1&gt;&lt;div&gt;1.jvm本地锁机制&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;2.redis乐观锁：&amp;nbsp; 400&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp;watch：可以监控一个或者多个key的值，如果在事务（exec）执行之前，key的值发生变化则取消事务执行&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp;multi：开启事务&amp;nbsp;&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp;exec：执行事务&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;3.分布式锁：&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;" style="text;html=1;strokeColor=none;fillColor=none;spacing=5;spacingTop=-20;whiteSpace=wrap;overflow=hidden;rounded=0;fontSize=13;" parent="1" vertex="1">
-          <mxGeometry x="870" y="460" width="310" height="210" as="geometry" />
+          <mxGeometry x="1140" y="440" width="310" height="210" as="geometry" />
         </mxCell>
         <mxCell id="TfjjIyQU7C_TwdfaUHE4-322" value="" style="shape=table;html=1;whiteSpace=wrap;startSize=0;container=1;collapsible=0;childLayout=tableLayout;" parent="1" vertex="1">
-          <mxGeometry x="810" y="280" width="300" height="470" as="geometry" />
+          <mxGeometry x="800" y="270" width="300" height="470" as="geometry" />
         </mxCell>
         <mxCell id="TfjjIyQU7C_TwdfaUHE4-323" value="" style="shape=partialRectangle;html=1;whiteSpace=wrap;collapsible=0;dropTarget=0;pointerEvents=0;fillColor=none;top=0;left=0;bottom=0;right=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" parent="TfjjIyQU7C_TwdfaUHE4-322" vertex="1">
           <mxGeometry width="300" height="40" as="geometry" />
         </mxCell>
         <mxCell id="TfjjIyQU7C_TwdfaUHE4-324" value="a用户" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;overflow=hidden;fillColor=none;top=0;left=0;bottom=0;right=0;" parent="TfjjIyQU7C_TwdfaUHE4-323" vertex="1">
-          <mxGeometry width="150" height="40" as="geometry" />
+          <mxGeometry width="150" height="40" as="geometry">
+            <mxRectangle width="150" height="40" as="alternateBounds" />
+          </mxGeometry>
         </mxCell>
         <mxCell id="TfjjIyQU7C_TwdfaUHE4-325" value="b用户" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;overflow=hidden;fillColor=none;top=0;left=0;bottom=0;right=0;" parent="TfjjIyQU7C_TwdfaUHE4-323" vertex="1">
-          <mxGeometry x="150" width="150" height="40" as="geometry" />
+          <mxGeometry x="150" width="150" height="40" as="geometry">
+            <mxRectangle width="150" height="40" as="alternateBounds" />
+          </mxGeometry>
         </mxCell>
         <mxCell id="TfjjIyQU7C_TwdfaUHE4-326" value="" style="shape=partialRectangle;html=1;whiteSpace=wrap;collapsible=0;dropTarget=0;pointerEvents=0;fillColor=none;top=0;left=0;bottom=0;right=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" parent="TfjjIyQU7C_TwdfaUHE4-322" vertex="1">
           <mxGeometry y="40" width="300" height="40" as="geometry" />
         </mxCell>
         <mxCell id="TfjjIyQU7C_TwdfaUHE4-327" value="begin开启事务" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;overflow=hidden;fillColor=none;top=0;left=0;bottom=0;right=0;" parent="TfjjIyQU7C_TwdfaUHE4-326" vertex="1">
-          <mxGeometry width="150" height="40" as="geometry" />
+          <mxGeometry width="150" height="40" as="geometry">
+            <mxRectangle width="150" height="40" as="alternateBounds" />
+          </mxGeometry>
         </mxCell>
         <mxCell id="TfjjIyQU7C_TwdfaUHE4-328" value="&lt;span&gt;begin开启事务&lt;/span&gt;" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;overflow=hidden;fillColor=none;top=0;left=0;bottom=0;right=0;" parent="TfjjIyQU7C_TwdfaUHE4-326" vertex="1">
-          <mxGeometry x="150" width="150" height="40" as="geometry" />
+          <mxGeometry x="150" width="150" height="40" as="geometry">
+            <mxRectangle width="150" height="40" as="alternateBounds" />
+          </mxGeometry>
         </mxCell>
         <mxCell id="TfjjIyQU7C_TwdfaUHE4-329" value="" style="shape=partialRectangle;html=1;whiteSpace=wrap;collapsible=0;dropTarget=0;pointerEvents=0;fillColor=none;top=0;left=0;bottom=0;right=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" parent="TfjjIyQU7C_TwdfaUHE4-322" vertex="1">
           <mxGeometry y="80" width="300" height="40" as="geometry" />
         </mxCell>
         <mxCell id="TfjjIyQU7C_TwdfaUHE4-330" value="获取锁成功" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;overflow=hidden;fillColor=none;top=0;left=0;bottom=0;right=0;" parent="TfjjIyQU7C_TwdfaUHE4-329" vertex="1">
-          <mxGeometry width="150" height="40" as="geometry" />
+          <mxGeometry width="150" height="40" as="geometry">
+            <mxRectangle width="150" height="40" as="alternateBounds" />
+          </mxGeometry>
         </mxCell>
         <mxCell id="TfjjIyQU7C_TwdfaUHE4-331" value="" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;overflow=hidden;fillColor=none;top=0;left=0;bottom=0;right=0;" parent="TfjjIyQU7C_TwdfaUHE4-329" vertex="1">
-          <mxGeometry x="150" width="150" height="40" as="geometry" />
+          <mxGeometry x="150" width="150" height="40" as="geometry">
+            <mxRectangle width="150" height="40" as="alternateBounds" />
+          </mxGeometry>
         </mxCell>
         <mxCell id="TfjjIyQU7C_TwdfaUHE4-332" value="" style="shape=partialRectangle;html=1;whiteSpace=wrap;collapsible=0;dropTarget=0;pointerEvents=0;fillColor=none;top=0;left=0;bottom=0;right=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" parent="TfjjIyQU7C_TwdfaUHE4-322" vertex="1">
           <mxGeometry y="120" width="300" height="40" as="geometry" />
         </mxCell>
         <mxCell id="TfjjIyQU7C_TwdfaUHE4-333" value="查询库存：21" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;overflow=hidden;fillColor=none;top=0;left=0;bottom=0;right=0;" parent="TfjjIyQU7C_TwdfaUHE4-332" vertex="1">
-          <mxGeometry width="150" height="40" as="geometry" />
+          <mxGeometry width="150" height="40" as="geometry">
+            <mxRectangle width="150" height="40" as="alternateBounds" />
+          </mxGeometry>
         </mxCell>
         <mxCell id="TfjjIyQU7C_TwdfaUHE4-334" value="" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;overflow=hidden;fillColor=none;top=0;left=0;bottom=0;right=0;" parent="TfjjIyQU7C_TwdfaUHE4-332" vertex="1">
-          <mxGeometry x="150" width="150" height="40" as="geometry" />
+          <mxGeometry x="150" width="150" height="40" as="geometry">
+            <mxRectangle width="150" height="40" as="alternateBounds" />
+          </mxGeometry>
         </mxCell>
         <mxCell id="TfjjIyQU7C_TwdfaUHE4-335" value="" style="shape=partialRectangle;html=1;whiteSpace=wrap;collapsible=0;dropTarget=0;pointerEvents=0;fillColor=none;top=0;left=0;bottom=0;right=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" parent="TfjjIyQU7C_TwdfaUHE4-322" vertex="1">
           <mxGeometry y="160" width="300" height="30" as="geometry" />
         </mxCell>
         <mxCell id="TfjjIyQU7C_TwdfaUHE4-336" value="扣减库存：20" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;overflow=hidden;fillColor=none;top=0;left=0;bottom=0;right=0;" parent="TfjjIyQU7C_TwdfaUHE4-335" vertex="1">
-          <mxGeometry width="150" height="30" as="geometry" />
+          <mxGeometry width="150" height="30" as="geometry">
+            <mxRectangle width="150" height="30" as="alternateBounds" />
+          </mxGeometry>
         </mxCell>
         <mxCell id="TfjjIyQU7C_TwdfaUHE4-337" value="" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;overflow=hidden;fillColor=none;top=0;left=0;bottom=0;right=0;" parent="TfjjIyQU7C_TwdfaUHE4-335" vertex="1">
-          <mxGeometry x="150" width="150" height="30" as="geometry" />
+          <mxGeometry x="150" width="150" height="30" as="geometry">
+            <mxRectangle width="150" height="30" as="alternateBounds" />
+          </mxGeometry>
         </mxCell>
         <mxCell id="TfjjIyQU7C_TwdfaUHE4-338" value="" style="shape=partialRectangle;html=1;whiteSpace=wrap;collapsible=0;dropTarget=0;pointerEvents=0;fillColor=none;top=0;left=0;bottom=0;right=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" parent="TfjjIyQU7C_TwdfaUHE4-322" vertex="1">
           <mxGeometry y="190" width="300" height="40" as="geometry" />
         </mxCell>
         <mxCell id="TfjjIyQU7C_TwdfaUHE4-339" value="释放锁" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;overflow=hidden;fillColor=none;top=0;left=0;bottom=0;right=0;" parent="TfjjIyQU7C_TwdfaUHE4-338" vertex="1">
-          <mxGeometry width="150" height="40" as="geometry" />
+          <mxGeometry width="150" height="40" as="geometry">
+            <mxRectangle width="150" height="40" as="alternateBounds" />
+          </mxGeometry>
         </mxCell>
         <mxCell id="TfjjIyQU7C_TwdfaUHE4-340" value="" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;overflow=hidden;fillColor=none;top=0;left=0;bottom=0;right=0;" parent="TfjjIyQU7C_TwdfaUHE4-338" vertex="1">
-          <mxGeometry x="150" width="150" height="40" as="geometry" />
+          <mxGeometry x="150" width="150" height="40" as="geometry">
+            <mxRectangle width="150" height="40" as="alternateBounds" />
+          </mxGeometry>
         </mxCell>
         <mxCell id="TfjjIyQU7C_TwdfaUHE4-341" value="" style="shape=partialRectangle;html=1;whiteSpace=wrap;collapsible=0;dropTarget=0;pointerEvents=0;fillColor=none;top=0;left=0;bottom=0;right=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" parent="TfjjIyQU7C_TwdfaUHE4-322" vertex="1">
           <mxGeometry y="230" width="300" height="40" as="geometry" />
         </mxCell>
         <mxCell id="TfjjIyQU7C_TwdfaUHE4-342" value="" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;overflow=hidden;fillColor=none;top=0;left=0;bottom=0;right=0;" parent="TfjjIyQU7C_TwdfaUHE4-341" vertex="1">
-          <mxGeometry width="150" height="40" as="geometry" />
+          <mxGeometry width="150" height="40" as="geometry">
+            <mxRectangle width="150" height="40" as="alternateBounds" />
+          </mxGeometry>
         </mxCell>
         <mxCell id="TfjjIyQU7C_TwdfaUHE4-343" value="获取锁成功" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;overflow=hidden;fillColor=none;top=0;left=0;bottom=0;right=0;" parent="TfjjIyQU7C_TwdfaUHE4-341" vertex="1">
-          <mxGeometry x="150" width="150" height="40" as="geometry" />
+          <mxGeometry x="150" width="150" height="40" as="geometry">
+            <mxRectangle width="150" height="40" as="alternateBounds" />
+          </mxGeometry>
         </mxCell>
         <mxCell id="TfjjIyQU7C_TwdfaUHE4-344" value="" style="shape=partialRectangle;html=1;whiteSpace=wrap;collapsible=0;dropTarget=0;pointerEvents=0;fillColor=none;top=0;left=0;bottom=0;right=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" parent="TfjjIyQU7C_TwdfaUHE4-322" vertex="1">
           <mxGeometry y="270" width="300" height="40" as="geometry" />
         </mxCell>
         <mxCell id="TfjjIyQU7C_TwdfaUHE4-345" value="" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;overflow=hidden;fillColor=none;top=0;left=0;bottom=0;right=0;" parent="TfjjIyQU7C_TwdfaUHE4-344" vertex="1">
-          <mxGeometry width="150" height="40" as="geometry" />
+          <mxGeometry width="150" height="40" as="geometry">
+            <mxRectangle width="150" height="40" as="alternateBounds" />
+          </mxGeometry>
         </mxCell>
         <mxCell id="TfjjIyQU7C_TwdfaUHE4-346" value="查询库存：21" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;overflow=hidden;fillColor=none;top=0;left=0;bottom=0;right=0;" parent="TfjjIyQU7C_TwdfaUHE4-344" vertex="1">
-          <mxGeometry x="150" width="150" height="40" as="geometry" />
+          <mxGeometry x="150" width="150" height="40" as="geometry">
+            <mxRectangle width="150" height="40" as="alternateBounds" />
+          </mxGeometry>
         </mxCell>
         <mxCell id="TfjjIyQU7C_TwdfaUHE4-347" value="" style="shape=partialRectangle;html=1;whiteSpace=wrap;collapsible=0;dropTarget=0;pointerEvents=0;fillColor=none;top=0;left=0;bottom=0;right=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" parent="TfjjIyQU7C_TwdfaUHE4-322" vertex="1">
           <mxGeometry y="310" width="300" height="40" as="geometry" />
         </mxCell>
         <mxCell id="TfjjIyQU7C_TwdfaUHE4-348" value="commit提交事务" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;overflow=hidden;fillColor=none;top=0;left=0;bottom=0;right=0;" parent="TfjjIyQU7C_TwdfaUHE4-347" vertex="1">
-          <mxGeometry width="150" height="40" as="geometry" />
+          <mxGeometry width="150" height="40" as="geometry">
+            <mxRectangle width="150" height="40" as="alternateBounds" />
+          </mxGeometry>
         </mxCell>
         <mxCell id="TfjjIyQU7C_TwdfaUHE4-349" value="" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;overflow=hidden;fillColor=none;top=0;left=0;bottom=0;right=0;" parent="TfjjIyQU7C_TwdfaUHE4-347" vertex="1">
-          <mxGeometry x="150" width="150" height="40" as="geometry" />
+          <mxGeometry x="150" width="150" height="40" as="geometry">
+            <mxRectangle width="150" height="40" as="alternateBounds" />
+          </mxGeometry>
         </mxCell>
         <mxCell id="TfjjIyQU7C_TwdfaUHE4-350" value="" style="shape=partialRectangle;html=1;whiteSpace=wrap;collapsible=0;dropTarget=0;pointerEvents=0;fillColor=none;top=0;left=0;bottom=0;right=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" parent="TfjjIyQU7C_TwdfaUHE4-322" vertex="1">
           <mxGeometry y="350" width="300" height="40" as="geometry" />
         </mxCell>
         <mxCell id="TfjjIyQU7C_TwdfaUHE4-351" value="" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;overflow=hidden;fillColor=none;top=0;left=0;bottom=0;right=0;" parent="TfjjIyQU7C_TwdfaUHE4-350" vertex="1">
-          <mxGeometry width="150" height="40" as="geometry" />
+          <mxGeometry width="150" height="40" as="geometry">
+            <mxRectangle width="150" height="40" as="alternateBounds" />
+          </mxGeometry>
         </mxCell>
         <mxCell id="TfjjIyQU7C_TwdfaUHE4-352" value="扣减库存：20" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;overflow=hidden;fillColor=none;top=0;left=0;bottom=0;right=0;" parent="TfjjIyQU7C_TwdfaUHE4-350" vertex="1">
-          <mxGeometry x="150" width="150" height="40" as="geometry" />
+          <mxGeometry x="150" width="150" height="40" as="geometry">
+            <mxRectangle width="150" height="40" as="alternateBounds" />
+          </mxGeometry>
         </mxCell>
         <mxCell id="TfjjIyQU7C_TwdfaUHE4-353" value="" style="shape=partialRectangle;html=1;whiteSpace=wrap;collapsible=0;dropTarget=0;pointerEvents=0;fillColor=none;top=0;left=0;bottom=0;right=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" parent="TfjjIyQU7C_TwdfaUHE4-322" vertex="1">
           <mxGeometry y="390" width="300" height="40" as="geometry" />
         </mxCell>
         <mxCell id="TfjjIyQU7C_TwdfaUHE4-354" value="" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;overflow=hidden;fillColor=none;top=0;left=0;bottom=0;right=0;" parent="TfjjIyQU7C_TwdfaUHE4-353" vertex="1">
-          <mxGeometry width="150" height="40" as="geometry" />
+          <mxGeometry width="150" height="40" as="geometry">
+            <mxRectangle width="150" height="40" as="alternateBounds" />
+          </mxGeometry>
         </mxCell>
         <mxCell id="TfjjIyQU7C_TwdfaUHE4-355" value="释放锁" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;overflow=hidden;fillColor=none;top=0;left=0;bottom=0;right=0;" parent="TfjjIyQU7C_TwdfaUHE4-353" vertex="1">
-          <mxGeometry x="150" width="150" height="40" as="geometry" />
+          <mxGeometry x="150" width="150" height="40" as="geometry">
+            <mxRectangle width="150" height="40" as="alternateBounds" />
+          </mxGeometry>
         </mxCell>
         <mxCell id="TfjjIyQU7C_TwdfaUHE4-356" value="" style="shape=partialRectangle;html=1;whiteSpace=wrap;collapsible=0;dropTarget=0;pointerEvents=0;fillColor=none;top=0;left=0;bottom=0;right=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" parent="TfjjIyQU7C_TwdfaUHE4-322" vertex="1">
           <mxGeometry y="430" width="300" height="40" as="geometry" />
         </mxCell>
         <mxCell id="TfjjIyQU7C_TwdfaUHE4-357" value="" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;overflow=hidden;fillColor=none;top=0;left=0;bottom=0;right=0;" parent="TfjjIyQU7C_TwdfaUHE4-356" vertex="1">
-          <mxGeometry width="150" height="40" as="geometry" />
+          <mxGeometry width="150" height="40" as="geometry">
+            <mxRectangle width="150" height="40" as="alternateBounds" />
+          </mxGeometry>
         </mxCell>
         <mxCell id="TfjjIyQU7C_TwdfaUHE4-358" value="提交事务" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;overflow=hidden;fillColor=none;top=0;left=0;bottom=0;right=0;" parent="TfjjIyQU7C_TwdfaUHE4-356" vertex="1">
-          <mxGeometry x="150" width="150" height="40" as="geometry" />
+          <mxGeometry x="150" width="150" height="40" as="geometry">
+            <mxRectangle width="150" height="40" as="alternateBounds" />
+          </mxGeometry>
         </mxCell>
         <mxCell id="VDgrpdzoqftGHSirvYtM-3" value="mysql悲观锁中使用行级锁：&lt;br&gt;1.锁的查询或者更新条件必须是索引字段&lt;br&gt;2.查询或者更新条件必须是具体值" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
           <mxGeometry x="800" y="750" width="370" height="100" as="geometry" />
@@ -195,7 +243,7 @@
           <mxGeometry x="257" y="970" width="586" height="510" as="geometry" />
         </mxCell>
         <mxCell id="R58Mf-FQMzFDL8tynt46-46" value="&lt;h1&gt;lua脚本：&lt;/h1&gt;&lt;div&gt;&lt;font style=&quot;font-size: 13px&quot;&gt;一次性发送多个指令给redis。redis单线程 执行指令遵守one-by-one规则&lt;/font&gt;&lt;/div&gt;&lt;div&gt;&lt;font style=&quot;font-size: 13px&quot;&gt;EVAL script numkeys key [key ...] arg [arg ...]&amp;nbsp; &amp;nbsp;输出的不是print，而是return&lt;/font&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;font style=&quot;font-size: 13px&quot;&gt;&amp;nbsp; &amp;nbsp;script：lua脚本字符串&lt;/font&gt;&lt;/div&gt;&lt;div&gt;&lt;font style=&quot;font-size: 13px&quot;&gt;&amp;nbsp; &amp;nbsp;numkeys：key列表的元素数量&lt;/font&gt;&lt;/div&gt;&lt;div&gt;&lt;font style=&quot;font-size: 13px&quot;&gt;&amp;nbsp; &amp;nbsp;key列表：以空格分割。KEYS[index 从1开始]&lt;/font&gt;&lt;/div&gt;&lt;div&gt;&lt;font style=&quot;font-size: 13px&quot;&gt;&amp;nbsp; &amp;nbsp;arg列表：以空格分割。ARGV[index]&lt;/font&gt;&lt;/div&gt;&lt;div&gt;&lt;font style=&quot;font-size: 13px&quot;&gt;&lt;br&gt;&lt;/font&gt;&lt;/div&gt;&lt;div&gt;&lt;font style=&quot;font-size: 13px&quot;&gt;&lt;br&gt;&lt;/font&gt;&lt;/div&gt;&lt;div&gt;&lt;font style=&quot;font-size: 13px&quot;&gt;变量：&lt;/font&gt;&lt;/div&gt;&lt;div&gt;&lt;font style=&quot;font-size: 13px&quot;&gt;&amp;nbsp; &amp;nbsp;全局变量：a=5&lt;/font&gt;&lt;/div&gt;&lt;div&gt;&lt;font style=&quot;font-size: 13px&quot;&gt;&amp;nbsp; &amp;nbsp;局部变量：local a=5&lt;/font&gt;&lt;/div&gt;&lt;div&gt;&lt;font style=&quot;font-size: 13px&quot;&gt;&lt;br&gt;&lt;/font&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;font-size: 13px&quot;&gt;分支控制：&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;font-size: 13px&quot;&gt;if 条件&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;font-size: 13px&quot;&gt;then&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;font-size: 13px&quot;&gt;&amp;nbsp; &amp;nbsp;代码块&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;font-size: 13px&quot;&gt;elseif 条件&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;font-size: 13px&quot;&gt;then&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;font-size: 13px&quot;&gt;&amp;nbsp; &amp;nbsp;代码库&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;font-size: 13px&quot;&gt;else&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;font-size: 13px&quot;&gt;&amp;nbsp; &amp;nbsp;代码块&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;font-size: 13px&quot;&gt;end&lt;/span&gt;&lt;/div&gt;" style="text;html=1;strokeColor=none;fillColor=none;spacing=5;spacingTop=-20;whiteSpace=wrap;overflow=hidden;rounded=0;" parent="1" vertex="1">
-          <mxGeometry x="290" y="1400" width="610" height="440" as="geometry" />
+          <mxGeometry x="390" y="1350" width="610" height="440" as="geometry" />
         </mxCell>
         <mxCell id="d8p1qoNOHxy499OuAT-9-7" style="rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=1;entryDx=0;entryDy=0;entryPerimeter=0;" parent="1" source="d8p1qoNOHxy499OuAT-9-1" target="d8p1qoNOHxy499OuAT-9-2" edge="1">
           <mxGeometry relative="1" as="geometry" />

@@ -275,7 +275,7 @@ public class StockService {
         }
     }
 
-    // @Transactional
+    // @TransactionalL
     public synchronized void deduct2() {
         try {
             Stock stock = this.stockMapper.selectOne(new QueryWrapper<Stock>().eq("product_code", 1001));
